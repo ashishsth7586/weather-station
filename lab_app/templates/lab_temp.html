@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Lab Temperature & Humidity</title>
+	<meta http-equiv="refresh" content="10">
+	<meta name="description" content="lab conditions - RaspberryPi">
+	<meta name="author" content="Ashish Shrestha">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600,800" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/static/css/normalize.css">
+        <link rel="stylesheet" href="/static/css/skeleton.css">
+
+        <link rel="icon" type="image/png" href="/static/images/favicon.png">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="two-third column" style="margin-top: 5%"> 
+				<h2>Real time lab conditions</h2>
+				<h1> Temperature: {{"{0:0.1f}".format(temp)}}ºC</h1>
+				<h1> Humidity: {{"{0:0.1f}".format(hum)}}%<h1>
+			</div>
+			<p> This page refresses every 10 seconds </p>
+		</div>
+	</div>
+</body>
+</html>
+
