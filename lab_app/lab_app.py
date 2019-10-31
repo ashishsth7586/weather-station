@@ -3,6 +3,10 @@ import time
 import datetime
 import arrow
 
+import chart_studio.plotly as py
+from plotly.graph_objects import *
+
+
 app = Flask(__name__)
 app.debug = True
 
@@ -44,7 +48,8 @@ def lab_env_db():
 						hum_items = len(humidities),
 						from_date = from_date_str,
 						to_date = to_date_str,
-						timezone = timezone)
+						timezone = timezone,
+						query_string = request.query_string)
 
 def get_records():
 
